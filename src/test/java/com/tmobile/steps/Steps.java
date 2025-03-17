@@ -6,6 +6,7 @@ import io.cucumber.java.Before;
 import io.cucumber.java.en.*;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.slf4j.Logger;
@@ -44,7 +45,7 @@ public class Steps {
     }
 
     @Given("Użytkownik otwiera przeglądarkę i przechodzi na stronę {string}")
-    public void użytkownik_otwiera_przeglądarkę_i_przechodzi_na_stronę(String url) {
+    public void openHomePage(String url) {
         homePage.open(url);
     }
 
