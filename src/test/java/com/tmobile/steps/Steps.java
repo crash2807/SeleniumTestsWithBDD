@@ -28,8 +28,9 @@ public class Steps {
     public void setUp() {
         WebDriverManager.firefoxdriver().setup();
         FirefoxOptions options = new FirefoxOptions();
+        options.addArguments("--headless");
+        options.addArguments("--width=1920", "--height=1080");
         driver = new FirefoxDriver(options);
-        driver.manage().window().maximize();
 
         homePage = new HomePage(driver);
         devicesPage = new DevicesPage(driver);
