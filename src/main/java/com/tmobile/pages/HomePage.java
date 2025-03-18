@@ -10,7 +10,7 @@ import java.time.Duration;
 
 public class HomePage extends BasePage {
 
-    private final By devicesMenu = By.xpath("//button[contains(text(),'Urządzenia')]");
+    private final By devicesMenu = By.cssSelector(".menu > li:nth-child(1) > button:nth-child(1)");
     private final By pageHeader = By.cssSelector("div.t-small");
     private final By cartIconFilled = By.cssSelector("div.ml-auto:nth-child(3) > a:nth-child(1) > div:nth-child(3)");
     public HomePage(WebDriver driver) {
